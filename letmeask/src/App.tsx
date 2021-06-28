@@ -1,11 +1,16 @@
-import { MainButton } from './components/Button'
+import { Home } from './pages/home';
+import { NewRoom } from './pages/NewRoom';
+
+import { BrowserRouter, Route } from 'react-router-dom'
 
 
 function App() {
   return (
-    <div>
-      <MainButton text = {['1','2','3']} />
-    </div>
+    <BrowserRouter>
+      <Route path="/" exact component={Home} />
+      <Route path="/rooms/new" component={NewRoom} />
+    </BrowserRouter>
+
   );
 }
 
